@@ -38,3 +38,11 @@ class Scene(object):
 					raise SceneFileException("Command tag must have start and value attributes.")
 			else:
 				raise SceneFileException("Child tag must be named meta or command, not ." % child.tag)
+	def getDuration(self):
+		dur = 0
+		for l in self.commands.items():
+			for c in l[1]:
+				tmp = l[0] + c.getDuration()
+				if tmp > dur:
+					dur = tmp
+		return dur

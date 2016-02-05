@@ -51,6 +51,9 @@ class Set(Command):
 		print("TODO: Set channel %s to value %d." % (self.channel, self.value))
 		#^TODO#
 		return 1 #done#
+		
+	def getDuration(self):
+		return 0
 
 class Fade(Command):
 	channel = None
@@ -84,6 +87,9 @@ class Fade(Command):
 			return 1 #done#
 		else:
 			return 0 #not done#
+		
+	def getDuration(self):
+		return self.duration
 
 class SceneError(Exception):
 	pass

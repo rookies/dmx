@@ -8,7 +8,7 @@ s.fromFile(sys.argv[1])
 running = []
 times = sorted(s.commands.keys())
 t = 0
-while t < 5000:
+while t <= s.getDuration():
 	## Check if we reached a new command ##
 	if (len(times) > 0) and (t >= times[0]):
 		for c in s.commands[times[0]]:
