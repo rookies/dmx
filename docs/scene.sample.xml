@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<scene>
+	<meta key="name">Sample Scene</meta>
+	<meta key="author">Robert</meta>
+	<meta key="date">2016-02-05</meta>
+	<meta key="comment">That's a comment.</meta>
+	<meta key="deviceclass">movinghead</meta>
+	<command start="0" value="set|tilt|100" />
+	<command start="1000" value="fade|tilt|255|2000" />
+	<command start="3000" value="wait|button" />
+</scene>

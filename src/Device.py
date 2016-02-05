@@ -21,7 +21,7 @@ class Device(object):
 	
 	def fromFile(self, f):
 		## Parse XML ##
-		logging.info("Reading from file `%s'.", f)
+		logging.info("Reading from device file `%s'.", f)
 		tree = ET.parse(f)
 		root = tree.getroot()
 		## Check root element (device) ##
