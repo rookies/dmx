@@ -16,8 +16,8 @@ class Helpers(object):
 			return Set(args)
 		elif cmd == "fade":
 			return Fade(args)
-		elif cmd == "wait":
-			return Wait(args)
+		else:
+			raise ValueError("Invalid command %s." % cmd)
 	@staticmethod
 	def parseValue(value):
 		v = int(value)
@@ -78,29 +78,12 @@ class Fade(Command):
 			newValue = self.startValue + diff*(t/self.duration)
 		else:
 			newValue = self.startValue - diff*(t/self.duration)
-		print("TODO: Set channel %s to value %d." % (self.channel, newValue))
+		#print("TODO: Set channel %s to value %d." % (self.channel, newValue))
 		#^TODO#
 		if t >= self.duration:
 			return 1 #done#
 		else:
 			return 0 #not done#
-	
-class Wait(Command):
-	action = None
-	
-	def __str__(self):
-		return "Wait(action='%s')" % self.action
-	
-	def __init__(self, args):
-		if len(args) is not 1:
-			raise SceneError("Wait command needs exactly one parameters.")
-		self.action = args[0]
-		
-	def maintain(self, t):
-		if random.randint(0,5) == 1:
-			return 1 #done#
-		else:
-			return 2 #stop clock#
 
 class SceneError(Exception):
 	pass

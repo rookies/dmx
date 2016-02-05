@@ -8,5 +8,4 @@
 	<command start="0" value="set|tilt|100" />
 	<command start="1000" value="fade|tilt|255|2000" />
 	<command start="1000" value="fade|pan|255|3000" />
-	<command start="3000" value="wait|button" />
 </scene>
