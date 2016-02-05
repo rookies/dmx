@@ -48,6 +48,7 @@ class Set(Command):
 		self.value = Helpers.parseValue(args[1])
 		
 	def maintain(self, t):
+		#TODO#
 		return 1 #done#
 
 class Fade(Command):
@@ -66,6 +67,7 @@ class Fade(Command):
 		self.duration = int(args[2])
 		
 	def maintain(self, t):
+		#TODO#
 		if t >= self.duration:
 			return 1 #done#
 		else:

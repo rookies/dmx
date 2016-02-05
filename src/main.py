@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import sys, logging
+import sys, logging, time
 from Scene import Scene
 
 logging.basicConfig(level=logging.DEBUG)
@@ -24,15 +24,13 @@ while t < 5000:
 		elif res == 1:
 			print("%10dms: END: %s" % (t, c[1]))
 		elif res == 2:
+			stillRunning.append(c)
 			print("%10dms: RST: %s" % (t, c[1]))
 			t -= 1
 		else:
 			raise ValueError()
 	running = stillRunning
-	## Print running commands ##
-	if len(running) > 0:
-		for c in running:
-			#print("%10dms: Still running: %s" % (t, c[1]))
-			pass
 	## Increase timer ##
 	t += 1
+	## FIXME: Sleep ##
+	time.sleep(0.001)
