@@ -48,13 +48,15 @@ class Set(Command):
 		self.value = Helpers.parseValue(args[1])
 		
 	def maintain(self, t):
-		#TODO#
+		print("TODO: Set channel %s to value %d." % (self.channel, self.value))
+		#^TODO#
 		return 1 #done#
 
 class Fade(Command):
 	channel = None
 	value = 0
 	duration = 0
+	startValue = -1
 	
 	def __str__(self):
 		return "Fade(channel='%s',value=%d,duration=%dms)" % (self.channel, self.value, self.duration)
@@ -67,7 +69,17 @@ class Fade(Command):
 		self.duration = int(args[2])
 		
 	def maintain(self, t):
-		#TODO#
+		if self.startValue == -1:
+			print("TODO: Get current value for channel %s." % self.channel)
+			#^TODO#
+			self.startValue = 0
+		diff = abs(self.value - self.startValue)
+		if self.value > self.startValue:
+			newValue = self.startValue + diff*(t/self.duration)
+		else:
+			newValue = self.startValue - diff*(t/self.duration)
+		print("TODO: Set channel %s to value %d." % (self.channel, newValue))
+		#^TODO#
 		if t >= self.duration:
 			return 1 #done#
 		else:
