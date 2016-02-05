@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<device type="movinghead" vendor="Stairville" name="MH-X50+">
+	<profile name="8ch">
+		<channel name="pan" offset="0" />
+		<channel name="tilt" offset="1" />
+		<channel name="color" offset="2">
+			<value start="0">white</value>
+			<value start="7">yellow</value>
+			<value start="14">pink</value>
+			<value start="21">green</value>
+			<value start="28">peachblow</value>
+			<value start="35">blue</value>
+			<value start="42">kellygreen</value>
+			<value start="49">red</value>
+			<value start="56">darkblue</value>
+			<value start="64">white+yellow</value>
+			<value start="71">yellow+pink</value>
+			<value start="78">pink+green</value>
+			<value start="85">green+peachblow</value>
+			<value start="92">peachblow+blue</value>
+			<value start="99">blue+kellygreen</value>
+			<value start="106">kellygreen+red</value>
+			<value start="113">red+darkblue</value>
+			<value start="120">darkblue+white</value>
+			<value start="128" variation="speedinc">rainbowpos</value>
+			<value start="192" variation="speedinc">rainbowneg</value>
+		</channel>
+		<channel name="shutter" offset="3">
+			<value start="0">closed</value>
+			<value start="4">open</value>
+			<value start="8" variation="speedinc">strobe</value>
+			<value start="216">open</value>
+		</channel>
+		<channel name="gobo" offset="4">
+			<value start="0">open</value>
+			<value start="8">2</value>
+			<value start="16">3</value>
+			<value start="24">4</value>
+			<value start="32">5</value>
+			<value start="40">6</value>
+			<value start="48">7</value>
+			<value start="56">8</value>
+			<value start="64" variation="speedinc">8 Shake</value>
+			<value start="72" variation="speedinc">7 Shake</value>
+			<value start="80" variation="speedinc">6 Shake</value>
+			<value start="88" variation="speedinc">5 Shake</value>
+			<value start="96" variation="speedinc">4 Shake</value>
+			<value start="104" variation="speedinc">3 Shake</value>
+			<value start="112" variation="speedinc">2 Shake</value>
+			<value start="120">open</value>
+			<value start="128" variation="speedinc">rainbowpos</value>
+			<value start="192" variation="speedinc">rainbowneg</value>
+		</channel>
+		<channel name="gobo_rotation" offset="5">
+			<value start="0">disabled</value>
+			<value start="64" variation="speedinc">pos</value>
+			<value start="148" variation="speedinc">neg</value>
+			<value start="232">jumping</value>
+		</channel>
+		<channel name="prism" offset="6">
+			<value start="0">disabled</value>
+			<value start="8" variation="speedinc">rotate</value>
+			<value start="248">fixed</value>
+		</channel>
+		<channel name="acuity" offset="7" />
+	</profile>
+	<!--<profile name="14h" />-->
+</device>

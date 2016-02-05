@@ -1,0 +1,58 @@
+<?xml coding="utf-8"?>
+<!--
+  Device Types:
+    * movinghead
+    * ...
+-->
+<device type="deviceType" vendor="deviceVendor" name="deviceName">
+	<!--
+	  Profiles are for different device modes, e.g. a
+	  8-Channel and a 14-Channel mode.
+	-->
+	<profile name="profileName">
+		<!--
+		  Possible entries:
+		    <channel name="channelName" offset="channelOffset" />
+		    <channel name="channelName" offset="channelOffset">
+		      <value start="valueStart">valueName</value>
+		      ...
+		      <value start="valueStart" variation="valueVariation">valueName</value>
+		      ...
+		    </channel>
+		  Channel names:
+		    * pan
+		    * finepan
+		    * tilt
+		    * finetilt
+		    * colors, values:
+		       o color names (e.g. white, see colors.xml)
+		       o hex codes (e.g. aabbcc)
+		       o combinations (e.g. yellow+white or aabbcc+ddeeff)
+		       o rainbowpos (variations allowed)
+		       o rainbowneg (variations allowed)
+		    * shutter, values:
+		       o open
+		       o closed
+		       o strobe (variations allowed)
+		    * gobo, values:
+		       o open
+		       o custom names (variations allowed)
+		       o rainbowpos (variations allowed)
+		       o rainbowneg (variations allowed)
+		    * gobo_rotation, values:
+		       o disabled
+		       o pos (variations allowed)
+		       o neg (variations allowed)
+		       o jumping
+		    * prism, values:
+		       o disabled
+		       o rotate (variations allowed)
+		       o fixed
+		    * acuity
+		  Value variations:
+		    * speedinc
+		    * ...
+		-->
+	</profile>
+	<!-- More profiles, if necessary. -->
+</device>

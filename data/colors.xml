@@ -1,0 +1,12 @@
+<?xml coding="utf-8"?>
+<colors>
+	<color name="white"     >ffffff</color>
+	<color name="yellow"    >ffff00</color>
+	<color name="pink"      >ff1493</color>
+	<color name="green"     >00ff00</color>
+	<color name="peachblow" >ffdab9</color>
+	<color name="blue"      >00bfff</color>
+	<color name="kellygreen">006400</color>
+	<color name="red"       >ff0000</color>
+	<color name="darkblue"  >00008b</color>
+</colors>
